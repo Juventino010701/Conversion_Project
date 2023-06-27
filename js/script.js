@@ -49,7 +49,7 @@ window.addEventListener("DOMContentLoaded", function () {
           kel.toFixed(2) +
           " \u00B0K" +
           "<br>" +
-          "Celcius ke Kelvin : " +
+          "Celcius ke Reamur : " +
           celcius +
           " + 0.8 = " +
           rea.toFixed(2) +
