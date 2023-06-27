@@ -1,0 +1,243 @@
+/* FONT GOOGLE */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  /* Dark Mode Theme */
+  --grey-dark: #2b2e3a;
+  --white: #fff;
+  --bg-border-dark: #2f3445;
+  --bg-button-dark: #3f465b;
+
+  /* Day Mode Theme */
+
+  --outline: #ffffff3e;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: #2b2e3a;
+  color: var(--white);
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: fit-content;
+  background-color: var(--bg-border-dark);
+  border-radius: 10px;
+  position: relative;
+  border: 0.1px solid var(--outline);
+  padding: 20px;
+  margin: 20px;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.input-row .input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-row .input-group label {
+  margin-bottom: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-row .input-group input[type="number"] {
+  background-color: rgba(0, 0, 0, 0.132);
+  color: var(--white);
+  border-radius: 12px;
+  padding: 10px;
+  outline: none;
+  margin-bottom: 15px;
+}
+
+.input-row .input-group input:focus {
+  border: 2px solid #ffffffcb;
+  transition: 0.3s;
+}
+
+button {
+  width: auto;
+  padding: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  border: none;
+  /* background: var(--bg-button-dark); */
+  background-color: transparent;
+  color: var(--white);
+  border-radius: 6px;
+}
+
+.btn {
+  border: 1px solid var(--outline);
+  transition: all 0.5;
+  margin-bottom: 10px;
+}
+
+.btn:hover {
+  border: 2px solid white;
+  transition: 0.4s;
+}
+
+.btn,
+.submit {
+  margin-right: 25px;
+}
+
+.btn,
+.res {
+  margin-left: 14px;
+}
+
+.btn:active {
+  transform: scale(0.9);
+  box-shadow: none;
+  background-color: transparent;
+}
+
+.reset {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  opacity: 0.2;
+}
+
+/* FORMULA CONTAINER */
+.formula-container {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--outline);
+}
+
+.formula-container label {
+  font-style: italic;
+}
+
+.formula-container #showFormula {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: left;
+  transition: 0.3s;
+}
+
+label {
+  display: block;
+  padding: 7px 0;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* FOOTER */
+footer {
+  letter-spacing: 1px;
+}
+
+footer h3 {
+  margin: 20px 0;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+footer h3 a {
+  text-decoration: none;
+  color: #4e809f;
+}
+
+footer h3 a:hover {
+  color: #40667d;
+}
+
+/* RESPONSIVE STYLE */
+
+/* MOBILE */
+@media (max-width: 480px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .title h1 {
+    font-size: 24px;
+  }
+
+  .input-row {
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  .input-row .input-group {
+    margin-bottom: 15px;
+  }
+
+  .btn.submit,
+  .btn.res {
+    margin-right: 10px;
+    margin-left: 10px;
+    width: calc(50% - 20px);
+  }
+
+  .formula-container #showFormula {
+    font-size: 13px;
+  }
+}
+
+/* TABLET */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container {
+    max-width: 600px;
+    margin: 10px auto;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 769px) {
+  .container {
+    max-width: 800px;
+    margin: 10px auto;
+  }
+
+  .input-row .input-group {
+    flex-basis: calc(50% - 10px);
+  }
+}
+
+/* Otomatis Switch Mode Day/Dark */
+/* @media (prefers-color-scheme: dark) {
+  body {
+    background: var(--bg-border-dark);
+  }
+} */

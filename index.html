@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperatur Conversion - Mini Project</title>
+    <link rel="icon" type="image/x-icon" href="image/balon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="containerNav">
+          <img src="https://asset.brandfetch.io/idOlCxDOEn/idHcqQTYKQ.svg">
+      </div>
+    <header class="title">
+      <h1>Temperatur Conversion</h1>
+    </header>
+    <main class="container">
+      <!-- ADD NILAI SUHU -->
+      <div class="add-container" id="container">
+        <div class="input-row">
+          <div class="input-group">
+            <label for="nilai">Celcius (&deg;C)</label>
+            <input type="number" name="celcius" id="celcius" />
+          </div>
+          <div class="input-group">
+            <label for="nilai">Fahrenheit (&deg;F)</label>
+            <input
+              type="number"
+              name="fahrenheit"
+              id="fahrenheit"
+              class="far"
+            />
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <label for="nilai">kelvin (&deg;K)</label>
+            <input type="number" name="kelvin" id="kelvin" />
+          </div>
+
+          <div class="input-group">
+            <label for="nilai">Reamur (&deg;Ré)</label>
+            <input type="number" name="reamur" id="reamur" />
+          </div>
+        </div>
+
+        <button type="submit" id="submit" class="btn submit">submit</button>
+        <button type="reset" id="reset" class="btn res">reset</button>
+      </div>
+      <div class="formula-container">
+        <label for="formula">Formula</label>
+        <p id="showFormula"></p>
+      </div>
+    </main>
+    <footer>
+      <h3>
+        Copyright &COPY; 2023
+        <a href="https://github.com/Juventino010701" target="_blank">Juventino Sindarto</a>
+      </h3>
+    </footer>
+  </body>
+  <script src="js/script.js"></script>
+  <script>
+    // Menambahkan Fitur Enter Event Ketika diklik
+    let container = document.getElementById("container");
+
+    container.addEventListener("keydown", function (event) {
+      if (event.keyCode === 13) {
+        if (event.target.tagName === "INPUT") {
+          document.getElementById("submit").click();
+        }
+      }
+    });
+  </script>
+</html>
